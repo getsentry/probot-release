@@ -13,7 +13,9 @@
   "dependencies": {
     "js-yaml": "^3.10.0",
     "lodash": "^4.17.4",
-    "probot": "^0.11.0"
+    "probot": "^0.11.0",
+    "rimraf": "^2.6.2",
+    "s3": "^4.4.0"
   },
   "devDependencies": {
     "eslint": "^4.5.0",
