@@ -1,0 +1,29 @@
+{
+  "name": "probot-release",
+  "version": "0.1.0",
+  "description": "Publishes build artifacts to GitHub releases",
+  "author": "Jan Michael Auer <jan.auer@sentry.io>",
+  "license": "BSD-3-Clause",
+  "repository": "https://github.com/getsentry/probot-release.git",
+  "scripts": {
+    "fix": "eslint lib --fix",
+    "lint": "eslint lib",
+    "start": "probot run ./index.js"
+  },
+  "dependencies": {
+    "js-yaml": "^3.10.0",
+    "lodash": "^4.17.4",
+    "probot": "^0.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.5.0",
+    "eslint-config-airbnb-base": "^11.3.2",
+    "eslint-plugin-import": "^2.7.0",
+    "localtunnel": "^1.8.2"
+  },
+  "engines": {
+    "node": ">= 7.7.0",
+    "npm": ">= 4.0.0",
+    "yarn": ">= 1.0.0"
+  }
+}
