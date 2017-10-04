@@ -8,6 +8,15 @@
         },
         "WEBHOOK_SECRET": {
             "description": "the secret configured for your GitHub App"
+        },
+        "S3_BUCKET": {
+            "description": "AWS S3 bucket containing build assets"
+        },
+        "S3_ACCESS_KEY": {
+            "description": "Access key for AWS S3"
+        },
+        "S3_SECRET_KEY": {
+            "description": "Access secret key for AWS S3"
         }
     }
 }
