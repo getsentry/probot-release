@@ -17,6 +17,15 @@
         },
         "S3_SECRET_KEY": {
             "description": "Access secret key for AWS S3"
+        },
+        "TWINE_USERNAME": {
+            "description": "Username to upload python packages to PyPI"
+        },
+        "TWINE_PASSWORD": {
+            "description": "Password to upload python packages to PyPI"
+        },
+        "COCOAPODS_TRUNK_TOKEN": {
+            "description": "Authentication token for cocoapods"
         }
     }
 }
