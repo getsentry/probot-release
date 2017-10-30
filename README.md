@@ -3,6 +3,20 @@
 > a GitHub App built with [probot](https://github.com/probot/probot) that
 > publishes build artifacts to various third party services.
 
+## Table of Contents
+
+- [Configuration](#configuration)
+  - [GitHub](#github-github)
+  - [NPM](#npm-npm)
+  - [Python Package Index](#python-package-index-pypi)
+  - [Cocoapods](#cocoapods-pods)
+  - [Homebrew](#homebrew-brew)
+- [Setup](#setup)
+  - [Github App](#github-app)
+  - [Amazon S3 Bucket](#amazon-s3-bucket)
+  - [Development](#development)
+- [Deployment](#deployment)
+
 ## Configuration
 
 The bot will only be active in repositories that contain `.github/release.yml`.
@@ -19,7 +33,7 @@ targets:
   - name: github
 ```
 
-### Github (`github`)
+### GitHub (`github`)
 
 Create a release on Github. If a Markdown changelog is present in the
 repository, this target tries to read the release name and description from
@@ -240,7 +254,7 @@ npm install
 npm start
 ```
 
-## Deploying
+## Deployment
 
 If you would like to run your own instance of this app, see the [docs for deployment](https://probot.github.io/docs/deployment/).
 
