@@ -3,6 +3,8 @@
 > a GitHub App built with [probot](https://github.com/probot/probot) that
 > publishes build artifacts to various third party services.
 
+![](https://user-images.githubusercontent.com/1433023/32178062-1a715f32-bd8c-11e7-9d4d-7e51593a8f28.png)
+
 ## Table of Contents
 
 - [Configuration](#configuration)
