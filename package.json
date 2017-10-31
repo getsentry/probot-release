@@ -19,6 +19,7 @@
     "rimraf": "^2.6.2",
     "s3": "^4.4.0",
     "semver-regex": "^1.0.0",
+    "split": "^1.0.1",
     "try-require": "^1.2.1"
   },
   "devDependencies": {
