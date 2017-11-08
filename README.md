@@ -77,13 +77,16 @@ The `npm` utility must be installed on the system.
 
 **Configuration**
 
-*none*
+| Option      | Description                                                    |
+| ----------- | -------------------------------------------------------------- |
+| `access` | **optional**. Visibility for scoped packages. Defaults to `private` |
 
 **Example**
 
 ```yaml
 targets:
-  - npm
+  - name: npm
+    access: private
 ```
 
 ### Python Package Index (`pypi`)
