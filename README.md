@@ -7,19 +7,20 @@
 
 ## Table of Contents
 
-- [Configuration](#configuration)
+- [Target Configuration](#target-configuration)
   - [GitHub](#github-github)
   - [NPM](#npm-npm)
   - [Python Package Index](#python-package-index-pypi)
   - [Cocoapods](#cocoapods-pods)
   - [Homebrew](#homebrew-brew)
+- [Store Configuration](#store-configuration)
+  - [Amazon S3](#amazon-s3-s3)
 - [Setup](#setup)
   - [Github App](#github-app)
-  - [Amazon S3 Bucket](#amazon-s3-bucket)
   - [Development](#development)
 - [Deployment](#deployment)
 
-## Configuration
+## Target Configuration
 
 The bot will only be active in repositories that contain `.github/release.yml`.
 In these repositories it will listen for tags and start a release if all status
@@ -195,6 +196,38 @@ targets:
       end
 ```
 
+## Store Configuration
+
+The app downloads release artifacts from a configured store provider. After
+building release assets on a CI server, they need to be uploaded to this store.
+The default store is Amazon S3 and can be changed via the `store` parameter
+in the cofiguration file:
+
+```yaml
+store: s3
+```
+
+### Amazon S3 (`s3`)
+
+Download artifacts from an Amazon S3 bucket. To create a bucket, please refer
+to the [official instructions](http://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html).
+Inside this bucket, the bot will always look for a folder with the schema
+`<organization>/<repository>/<commit-sha>`.
+
+**Environment**
+
+| Name            | Description                                      |
+| --------------- | ------------------------------------------------ |
+| `S3_BUCKET`     | The name of the S3 bucket to download files from |
+| `S3_ACCESS_KEY` | The public access key for the bucket             |
+| `S3_SECRET_KEY` | The secret access key for the bucket             |
+
+**Configuration**
+
+```yaml
+store: s3
+```
+
 ## Setup
 
 This Probot app requires authentication tokens and credentials for third party
@@ -207,7 +240,8 @@ environment variables.
 
 ### Github App
 
-First, create a GitHub App by following the instructions [here](https://probot.github.io/docs/deployment/#create-the-github-app).
+First, create a GitHub App by following the instructions
+[here](https://probot.github.io/docs/deployment/#create-the-github-app).
 Then, make sure to download the private key and place it in the root directory
 of this application or set it via the `PRIVATE_KEY` environment variable.
 Finally, set the following environment variables:
@@ -216,24 +250,6 @@ Finally, set the following environment variables:
 | ---------------- | ---------------------------------------------------- |
 | `APP_ID`         | Unique ID of the GitHub App                          |
 | `WEBHOOK_SECRET` | Random webhook secret configured during app creation |
-
-
-### Amazon S3 Bucket
-
-In the most basic setup, this app will download release artifacts from S3 and
-publish them on the GitHub release page. This requires the following
-environment variables:
-
-| Name            | Description                                      |
-| --------------- | ------------------------------------------------ |
-| `S3_BUCKET`     | The name of the S3 bucket to download files from |
-| `S3_ACCESS_KEY` | The public access key for the bucket             |
-| `S3_SECRET_KEY` | The secret access key for the bucket             |
-
-Inside this bucket, the bot will always look for a folder with the schema
-`<organization>/<repository>/<commit-sha>` and download all direct files.
-Depending on the release targets' implementations, some or all of these files
-will be processed and re-uploaded to third-party services.
 
 ### Development
 
