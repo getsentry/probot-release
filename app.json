@@ -26,6 +26,9 @@
         },
         "COCOAPODS_TRUNK_TOKEN": {
             "description": "Authentication token for cocoapods"
+        },
+        "ZEUS_API_TOKEN": {
+            "description": "API token to authenticate Zeus CI"
         }
     }
 }
