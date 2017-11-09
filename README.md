@@ -15,6 +15,7 @@
   - [Homebrew](#homebrew-brew)
 - [Store Configuration](#store-configuration)
   - [Amazon S3](#amazon-s3-s3)
+  - [Zeus CI](#zeus-ci-zeus)
 - [Setup](#setup)
   - [Github App](#github-app)
   - [Development](#development)
@@ -229,6 +230,29 @@ Inside this bucket, the bot will always look for a folder with the schema
 
 ```yaml
 store: s3
+```
+
+### Zeus CI (`zeus`)
+
+Download artifacts from [Zeus](https://zeus.ci). This requires an
+[API token](https://zeus.ci/settings/token) for a user with access to all
+repositories. Also, each repository must be activated and a hook configured
+in the repository settings.
+
+To upload releases, use the [zeus-ci](https://npmjs.org/package/zeus-ci)
+command line utility.
+
+**Environment**
+
+| Name              | Description                                             |
+| ----------------- | ------------------------------------------------------- |
+| `ZEUS_API_TOKEN`  | API token to authorize with Zeus CI                     |
+| `ZEUS_SERVER_URL` | **optional**. The URL to reach Zeus. Defaults to `https://zeus.ci` |
+
+**Configuration**
+
+```yaml
+store: zeus
 ```
 
 ## Setup
