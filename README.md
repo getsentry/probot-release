@@ -311,11 +311,12 @@ Finally, set the following environment variables:
 To start the development server, make sure the following environment variables
 are set:
 
-| Name        | Description                                       |
-| ----------- | ------------------------------------------------- |
-| `DRY_RUN`   | Disables actual releases. Set to `true`           |
-| `SUBDOMAIN` | Subdomain for localtunnel to receive webhooks     |
-| `LOG_LEVEL` | Sets the loggers output verbosity. Set to `debug` |
+| Name              | Description                                       |
+| ----------------- | ------------------------------------------------- |
+| `DRY_RUN`         | Disables actual releases. Set to `true`           |
+| `RELEASE_TIMEOUT` | Timeout before a release starts. Defaults to `60` |
+| `SUBDOMAIN`       | Subdomain for localtunnel to receive webhooks     |
+| `LOG_LEVEL`       | Sets the loggers output verbosity. Set to `debug` |
 
 Then, install dependencies and run the bot with:
 
