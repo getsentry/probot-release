@@ -1,34 +1,38 @@
 {
-    "env": {
-        "PRIVATE_KEY": {
-            "description": "the private key you downloaded when creating the GitHub App"
-        },
-        "APP_ID": {
-            "description": "the ID of your GitHub App"
-        },
-        "WEBHOOK_SECRET": {
-            "description": "the secret configured for your GitHub App"
-        },
-        "S3_BUCKET": {
-            "description": "AWS S3 bucket containing build assets"
-        },
-        "S3_ACCESS_KEY": {
-            "description": "Access key for AWS S3"
-        },
-        "S3_SECRET_KEY": {
-            "description": "Access secret key for AWS S3"
-        },
-        "TWINE_USERNAME": {
-            "description": "Username to upload python packages to PyPI"
-        },
-        "TWINE_PASSWORD": {
-            "description": "Password to upload python packages to PyPI"
-        },
-        "COCOAPODS_TRUNK_TOKEN": {
-            "description": "Authentication token for cocoapods"
-        },
-        "ZEUS_API_TOKEN": {
-            "description": "API token to authenticate Zeus CI"
-        }
+  "env": {
+    "PRIVATE_KEY": {
+      "description":
+        "the private key you downloaded when creating the GitHub App"
+    },
+    "APP_ID": {
+      "description": "the ID of your GitHub App"
+    },
+    "WEBHOOK_SECRET": {
+      "description": "the secret configured for your GitHub App"
+    },
+    "S3_BUCKET": {
+      "description": "AWS S3 bucket containing build assets"
+    },
+    "S3_ACCESS_KEY": {
+      "description": "Access key for AWS S3"
+    },
+    "S3_SECRET_KEY": {
+      "description": "Access secret key for AWS S3"
+    },
+    "TWINE_USERNAME": {
+      "description": "Username to upload python packages to PyPI"
+    },
+    "TWINE_PASSWORD": {
+      "description": "Password to upload python packages to PyPI"
+    },
+    "COCOAPODS_TRUNK_TOKEN": {
+      "description": "Authentication token for cocoapods"
+    },
+    "ZEUS_API_TOKEN": {
+      "description": "API token to authenticate Zeus CI"
+    },
+    "CARGO_REGISTRY_TOKEN": {
+      "description": "Token to authenticate with crates.io"
     }
+  }
 }

@@ -19,12 +19,14 @@
   "dependencies": {
     "dryrun": "^1.0.0",
     "lodash": "^4.17.4",
+    "node-fetch": "^1.7.3",
     "probot": "^0.11.0",
     "request": "^2.83.0",
     "rimraf": "^2.6.2",
     "s3": "^4.4.0",
     "semver-regex": "^1.0.0",
     "split": "^1.0.1",
+    "tar": "^4.0.2",
     "try-require": "^1.2.1"
   },
   "devDependencies": {
