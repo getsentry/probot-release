@@ -13,6 +13,7 @@
   - [Python Package Index](#python-package-index-pypi)
   - [Cocoapods](#cocoapods-pods)
   - [Homebrew](#homebrew-brew)
+  - [Cargo](#cargo-cargo)
 - [Store Configuration](#store-configuration)
   - [Amazon S3](#amazon-s3-s3)
   - [Zeus CI](#zeus-ci-zeus)
@@ -199,6 +200,32 @@ targets:
           bin.install "myproject"
         end
       end
+```
+
+### Cargo (`cargo`)
+
+Publishes a single package or entire workspace on the public crate registry
+([crates.io](https://crates.io)). If the workspace contains multiple crates,
+they are published in an order depending on their dependencies.
+
+**Environment**
+
+Rustup must be installed and configured on the system.
+
+| Name                   | Description                                       |
+| ---------------------- | ------------------------------------------------- |
+| `CARGO_REGISTRY_TOKEN` | The access token to the crates.io account         |
+| `CARGO_BIN`            | **optional**. Path to cargo. Defaults to `cargo`. |
+
+**Configuration**
+
+*none*
+
+**Example**
+
+```yaml
+targets:
+  - cargo
 ```
 
 ## Store Configuration
