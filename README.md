@@ -129,6 +129,7 @@ The `cocoapods` gem must be installed on the system.
 | Name                    | Description                               |
 | ----------------------- | ----------------------------------------- |
 | `COCOAPODS_TRUNK_TOKEN` | The access token to the cocoapods account |
+| `COCOAPODS_BIN`         | **optional**. Path to cocoapods.          |
 
 **Configuration**
 
