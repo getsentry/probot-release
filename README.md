@@ -20,6 +20,7 @@
 * [Setup](#setup)
   * [Github App](#github-app)
   * [Development](#development)
+  * [Testing](#testing)
 * [Deployment](#deployment)
 
 ## Target Configuration
@@ -327,6 +328,28 @@ npm install
 
 # Run the bot
 npm start
+```
+
+We highly recommend to use VSCode and install the recommended extensions. They
+will configure your IDe to match the coding style, invoke auto formatters every
+time you save and run the test suite in the background for you.
+
+### Testing
+
+The bot includes an automated test suite that includes unit tests, linting and
+formating checks. Additionally, this command generates a coverage report in
+`coverage/`. You can run it with npm:
+
+```sh
+npm test
+```
+
+We use [prettier](https://prettier.io/) for auto-formatting and
+[eslint](https://eslint.org/) as linter. Both tools can automatically fix most
+issues for you. To invoke them, simply run:
+
+```sh
+npm run fix
 ```
 
 ## Deployment
