@@ -1,6 +1,6 @@
 {
   "name": "probot-release",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "Publishes build artifacts to GitHub releases",
   "author": "Jan Michael Auer <jan.auer@sentry.io>",
   "license": "BSD-3-Clause",
