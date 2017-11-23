@@ -213,10 +213,12 @@ they are published in an order depending on their dependencies.
 
 Rustup must be installed and configured on the system.
 
-| Name                   | Description                                       |
-| ---------------------- | ------------------------------------------------- |
-| `CARGO_REGISTRY_TOKEN` | The access token to the crates.io account         |
-| `CARGO_BIN`            | **optional**. Path to cargo. Defaults to `cargo`. |
+| Name                   | Description                                                 |
+| ---------------------- | ----------------------------------------------------------- |
+| `CARGO_REGISTRY_TOKEN` | The access token to the crates.io account                   |
+| `CARGO_BIN`            | **optional**. Path to cargo. Defaults to `cargo`.           |
+| `CARGO_HOME`           | **optional**. Path to the cargo installation.               |
+| `RUSTUP_HOME`          | **optional**. Path to the rustup (toolchains) installation. |
 
 **Configuration**
 
