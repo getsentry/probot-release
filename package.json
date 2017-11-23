@@ -30,10 +30,10 @@
     "try-require": "^1.2.1"
   },
   "devDependencies": {
-    "eslint": "^4.5.0",
-    "eslint-config-airbnb-base": "^11.3.2",
-    "eslint-config-prettier": "^2.7.0",
-    "eslint-plugin-import": "^2.7.0",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.8.0",
+    "eslint-plugin-import": "^2.8.0",
     "jest": "^21.2.1",
     "localtunnel": "^1.8.2",
     "npm-run-all": "^4.1.2",
