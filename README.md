@@ -336,9 +336,9 @@ npm run test:watch
 ```
 
 We highly recommend to use VSCode and install the recommended extensions. They
-will configure your IDe to match the coding style, invoke auto formatters every
-time you save and run the test suite in the background for you. In this case,
-you don't have to run the test watchers manually.
+will configure your IDE to match the coding style, invoke auto formatters every
+time you save and run tests in the background for you. No need to run the
+watchers manually.
 
 ### Testing
 
