@@ -326,13 +326,13 @@ Then, install dependencies and run the bot with:
 
 ```sh
 # Install dependencies
-npm install
+yarn
 
 # Run the bot
-npm start
+yarn start
 
 # Run test watchers
-npm run test:watch
+yarn test:watch
 ```
 
 We highly recommend to use VSCode and install the recommended extensions. They
@@ -347,7 +347,7 @@ formating checks. Additionally, this command generates a coverage report in
 `coverage/`. You can run it with npm:
 
 ```sh
-npm test
+yarn test
 ```
 
 We use [prettier](https://prettier.io/) for auto-formatting and
@@ -355,7 +355,7 @@ We use [prettier](https://prettier.io/) for auto-formatting and
 issues for you. To invoke them, simply run:
 
 ```sh
-npm run fix
+yarn fix
 ```
 
 ## Deployment
