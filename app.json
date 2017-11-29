@@ -33,6 +33,9 @@
     },
     "CARGO_REGISTRY_TOKEN": {
       "description": "Token to authenticate with crates.io"
+    },
+    "DOCKER_TRIGGER_URL": {
+      "description": "URL to trigger automated builds on Docker Hub/Cloud"
     }
   }
 }
