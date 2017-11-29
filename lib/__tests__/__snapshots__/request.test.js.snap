@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`request allows Accept header overrides 1`] = `
+exports[`allows Accept header overrides 1`] = `
 Array [
   "http://example.org",
   Object {
@@ -11,7 +11,7 @@ Array [
 ]
 `;
 
-exports[`request passes all parameters to fetch 1`] = `
+exports[`passes all parameters to fetch 1`] = `
 Array [
   "http://example.org",
   Object {
