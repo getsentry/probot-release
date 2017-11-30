@@ -14,7 +14,6 @@
   * [Cocoapods](#cocoapods-pods)
   * [Homebrew](#homebrew-brew)
   * [Cargo](#cargo-cargo)
-  * [Docker Hub/Cloud](#docker-hubcloud-docker)
 * [Store Configuration](#store-configuration)
   * [Amazon S3](#amazon-s3-s3)
   * [Zeus CI](#zeus-ci-zeus)
@@ -230,55 +229,6 @@ _none_
 ```yaml
 targets:
   - cargo
-```
-
-### Docker Hub/Cloud (`docker`)
-
-Trigger a build either on Docker Hub or Docker Cloud. This requires a Dockerfile
-in the repository as well as automated builds configured on Docker. Note that
-Docker builds take significantly longer than other release targets and might
-fail asynchronously. Therefore, it is best to first test the build in CI.
-
-Please refer to the documentation on
-[Docker Hub](https://docs.docker.com/docker-hub/builds/) or
-[Docker Cloud](https://docs.docker.com/docker-cloud/builds/automated-build/) for
-instructions to set up automated builds. In the build rules section, configure a
-rule with the following properties:
-
-| Field           | Value                                  |
-| --------------- | -------------------------------------- |
-| **Source Type** | Tag                                    |
-| **Source**      | `/^v?([0-9]+).([0-9]+).([0-9]+)$/`     |
-| **Docker Tag**  | `latest,{\1},{\1}.{\2},{\1}.{\2}.{\3}` |
-| **Autobuild**   | _Off_                                  |
-
-Also, create a "Build Trigger" and configure the URL as environment variable:
-
-```sh
-# Docker Hub
-DOCKER_TRIGGER_URL=https://registry.hub.docker.com/u/org/project/trigger/XXX/
-
-# Docker Cloud
-DOCKER_TRIGGER_URL=https://cloud.docker.com/api/build/v1/source/XXX/trigger/YYY/call/
-```
-
-**Environment**
-
-Rustup must be installed and configured on the system.
-
-| Name                 | Description                                         |
-| -------------------- | --------------------------------------------------- |
-| `DOCKER_TRIGGER_URL` | URL to trigger automated builds on Docker Hub/Cloud |
-
-**Configuration**
-
-_none_
-
-**Example**
-
-```yaml
-targets:
-  - docker
 ```
 
 ## Store Configuration
