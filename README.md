@@ -23,12 +23,22 @@
   * [Testing](#testing)
 * [Deployment](#deployment)
 
-## Target Configuration
+## Configuration
 
 The bot will only be active in repositories that contain `.github/release.yml`.
 In these repositories it will listen for tags and start a release if all status
 checks associated to the tag's commit are successful. In case a commit has no
 status checks, the release is skipped.
+
+This file specifies release targets, stores and more:
+
+| Option          | Description                                                                     |
+| --------------- | ------------------------------------------------------------------------------- |
+| `store`         | **optional**. The store for release artifacts (see below).                      |
+| `targets`       | **optional**. List of release targets (see below).                              |
+| `ignoredChecks` | **optional**. A list of ignored status checks. Can be prefixes or entire names. |
+
+## Target Configuration
 
 The configuration specifies which release targets to run for the repository. To
 run more targets, list the target identifiers under the `target` key. If the
