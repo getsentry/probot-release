@@ -14,7 +14,9 @@
     "test:eslint": "eslint lib",
     "test:prettier": "prettier-check 'lib/**/*.js'",
     "test": "npm-run-all test:jest test:eslint test:prettier",
-    "test:watch": "jest --watch --notify"
+    "test:watch": "jest --watch --notify",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "dryrun": "^1.0.0",
@@ -27,7 +29,8 @@
     "semver-regex": "^1.0.0",
     "split": "^1.0.1",
     "tar": "^4.0.2",
-    "try-require": "^1.2.1"
+    "try-require": "^1.2.1",
+    "snyk": "^1.85.0"
   },
   "devDependencies": {
     "eslint": "^4.11.0",
@@ -42,5 +45,6 @@
   },
   "engines": {
     "node": ">=8"
-  }
+  },
+  "snyk": true
 }
