@@ -26,7 +26,7 @@
     "s3": "^4.4.0",
     "semver-regex": "^1.0.0",
     "split": "^1.0.1",
-    "tar": "^4.0.2",
+    "tar": "^4.4.2",
     "try-require": "^1.2.1"
   },
   "devDependencies": {
